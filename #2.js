@@ -5,7 +5,7 @@
 // Transforma el texto a un objeto que contenga el nombre de cada regalo y las veces que aparece. Por ejemplo, si tenemos el texto:
 
 function listGifts(letter) {
-    const arrayRegalos = letter.split(' ')
+    const arrayRegalos = letter.trim().split(' ')
     const regalos = {}
     arrayRegalos.map((element)=>{
         if (element.includes('_') === false) { 
@@ -19,7 +19,7 @@ function listGifts(letter) {
     return regalos
 }
 
-const carta = 'bici coche balon _playstation bici coche peluche'
+const carta = 'bici coche balón _playstation bici coche peluche'
 
 const regalos = listGifts(carta)
 
